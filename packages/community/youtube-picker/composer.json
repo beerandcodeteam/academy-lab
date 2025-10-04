@@ -1,0 +1,33 @@
+{
+    "name": "community/youtube-picker",
+    "description": "A simple package to search and pick unlisted YouTube videos for FilamentPHP.",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "João Merlotti",
+            "email": "joaopedromerlotti@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "google/apiclient": "^2.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Community\\YoutubePicker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Community\\YoutubePicker\\YoutubePickerServiceProvider"
+            ],
+            "aliases": {
+                "Youtube": "Community\\YoutubePicker\\Facades\\Youtube"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

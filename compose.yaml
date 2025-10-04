@@ -72,6 +72,16 @@ services:
             - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'
         networks:
             - sail
+    ngrok:
+        image: ngrok/ngrok:latest
+        restart: unless-stopped
+        ports:
+            - 4040:4040
+        command: http host.docker.internal:${APP_PORT:-80}
+        environment:
+            - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+        depends_on:
+            - laravel.test
 networks:
     sail:
         driver: bridge
