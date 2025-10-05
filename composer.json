@@ -3,15 +3,25 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/community/youtube-picker"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "filament/filament": "^4.0",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
-        "laravellegends/pt-br-validator": "^12.2"
+        "laravellegends/pt-br-validator": "^12.2",
+        "community/youtube-picker": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
